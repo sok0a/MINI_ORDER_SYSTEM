@@ -15,9 +15,9 @@ public class Member extends Common {
     private String nickname;
     // 회원 계좌
     @Getter
-    private String account;
+    private Account account;
 
-    public Member(String email, String password, String nickname, String account) {
+    public Member(String email, String password, String nickname, Account account) {
         this.email = email;
         this.password = password;
         this.nickname = nickname;

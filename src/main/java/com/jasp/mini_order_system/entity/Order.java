@@ -1,13 +1,14 @@
 package com.jasp.mini_order_system.entity;
 
 import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-
+@ToString
 public class Order extends Common {
 
     // 주문 회원

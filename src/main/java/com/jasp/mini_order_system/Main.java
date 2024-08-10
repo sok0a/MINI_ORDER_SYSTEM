@@ -27,8 +27,8 @@ public class Main {
     public static void main(String[] args) {
 
         // 데이터 초기화
-        /*itemDataInit();
-        memberAndAccountDataInit();*/
+        itemDataInit();
+        memberAndAccountDataInit();
 
         // 주문 생성
         List<Member> memberList = memberRepository.findAll();
@@ -58,7 +58,7 @@ public class Main {
         print(orderList);
     }
 
-    /*private static void memberAndAccountDataInit() {
+    private static void memberAndAccountDataInit() {
         final Account accountA = new Account("123-456-7890", 3000000); // 3,000,000원
         final Member memberA = new Member("park@mju.ac.kr", "9yz5CT4mLR", "PARK", accountA);
         accountRepository.save(accountA);
@@ -78,10 +78,10 @@ public class Main {
         final Member memberD = new Member("ko@mju.ac.kr", "HB4NU0yRCF", "KO", accountD);
         accountRepository.save(accountD);
         memberRepository.save(memberD);
-    }*/
+    }
 
 
-    /*private static void itemDataInit() {
+    private static void itemDataInit() {
         final Item laptop = new Item("노트북", 1500000, Category.ELECTRONICS); // 1,500,000원
         itemRepository.save(laptop);
         final Item smartphone = new Item("스마트폰", 900000, Category.ELECTRONICS); // 900,000원
@@ -125,6 +125,6 @@ public class Main {
         itemRepository.save(sofa);
         final Item lamp = new Item("램프", 30000, Category.FURNITURE); // 30,000원
         itemRepository.save(lamp);
-    }*/
+    }
 
 }
