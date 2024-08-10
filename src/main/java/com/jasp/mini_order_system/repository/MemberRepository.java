@@ -13,26 +13,37 @@ public class MemberRepository implements Repository<Member> {
 
     @Override
     public void save(Member entity) {
-
+        DB.put(entity.getId(), entity);
     }
 
     @Override
-    public Member findById(int id) {
-        return null;
+    public Member findById(int id){
+        return DB.get(id);
     }
 
     @Override
-    public List<Member> findAll() {
-        return List.of();
+    public List<Member> findAll(){
+        return new ArrayList<>(DB.values());
     }
 
     @Override
     public boolean update(Member entity) {
-        return false;
+        if(DB.containsKey(entity.getId())){
+            DB.put(entity.getId(), entity);
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     @Override
     public boolean delete(int id) {
-        return false;
+        if(DB.containsKey(id)){
+            DB.remove(id);
+            return true;
+        }else{
+            return false;
+        }
     }
 }

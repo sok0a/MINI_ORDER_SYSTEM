@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Getter
 public abstract class Common {
 
     // 정적 변수로 고유 식별자를 위한 시퀀스 초기화

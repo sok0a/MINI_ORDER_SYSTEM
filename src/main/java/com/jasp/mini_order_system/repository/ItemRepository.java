@@ -13,26 +13,36 @@ public class ItemRepository implements Repository<Item> {
 
     @Override
     public void save(Item entity) {
-
+        DB.put(entity.getId(), entity);
     }
 
     @Override
     public Item findById(int id) {
-        return null;
+        return DB.get(id);
     }
 
     @Override
     public List<Item> findAll() {
-        return List.of();
+        return new ArrayList<>(DB.values());
     }
 
     @Override
-    public boolean update(Item entity) {
-        return false;
+    public boolean update(Item entity){
+        if(DB.containsKey(entity.getId())){
+            DB.put(entity.getId(), entity);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
-    public boolean delete(int id) {
-        return false;
+    public boolean delete(int id){
+        if(DB.containsKey(id)) {
+            DB.remove(id);
+            return true;
+        }else{
+            return false;
+        }
     }
 }
