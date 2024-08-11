@@ -2,7 +2,7 @@ package com.jasp.mini_order_system.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
+@AllArgsConstructor
 public class Account extends Common {
 
     // 계좌 번호
@@ -19,9 +19,9 @@ public class Account extends Common {
     public void deposit(int amount) {
         balance += amount;
     }
-    public Account(String accountNumber, int balance) {
+    /*public Account(String accountNumber, int balance) {
         super();
         this.accountNumber = accountNumber;
         this.balance = balance;
-    }
+    }*/
 }

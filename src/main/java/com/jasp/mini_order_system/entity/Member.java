@@ -2,6 +2,7 @@ package com.jasp.mini_order_system.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+@AllArgsConstructor
 public class Member extends Common {
 
     // 회원 이메일
@@ -17,10 +18,10 @@ public class Member extends Common {
     @Getter
     private Account account;
 
-    public Member(String email, String password, String nickname, Account account) {
+    /*public Member(String email, String password, String nickname, Account account) {
         this.email = email;
         this.password = password;
         this.nickname = nickname;
         this.account = account;
-    }
+    }*/
 }

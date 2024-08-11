@@ -1,5 +1,6 @@
 package com.jasp.mini_order_system.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 @ToString
+
 public class Order extends Common {
 
     // 주문 회원
